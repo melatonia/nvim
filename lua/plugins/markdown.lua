@@ -8,6 +8,7 @@ return {
 	},
 	ft = { "markdown" },
 	opts = {
+		latex = { enabled = false },
 		code = {
 			width = "block",
 			right_pad = 1,
