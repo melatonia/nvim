@@ -35,6 +35,10 @@ nvim/
         ├── markdown.lua      — render-markdown
         ├── which-key.lua     — keymap hints
         └── indent.lua        — indent guides
+        ├── smear-cursor.lua  — animated cursor
+        ├── neoscroll.lua     — smooth scrolling
+        ├── undo-glow.lua     — animated undo/redo/yank/paste
+        └── glow.lua          — markdown floating preview
 ```
 
 ## requirements
@@ -44,6 +48,7 @@ nvim/
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (for telescope live grep)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard) (wayland clipboard)
 - a [nerd font](https://www.nerdfonts.com/) — config uses JetBrainsMono Nerd Font
+- [glow](https://github.com/charmbracelet/glow) — for glow.nvim markdown preview
 
 ## install
 
