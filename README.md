@@ -53,7 +53,7 @@ nvim/
 ## install
 
 ```bash
-git clone https://github.com/yourusername/nvim.git ~/.config/nvim
+git clone https://github.com/melatonia/nvim.git ~/.config/nvim
 nvim  # lazy.nvim will auto-install everything on first launch
 ```
 
