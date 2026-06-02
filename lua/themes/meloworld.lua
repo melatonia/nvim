@@ -1,28 +1,29 @@
 -- lua/themes/meloworld.lua
+-- Palette sourced from meloworld Colors.qml — accent: teal200 (#80cbc4)
 
 local M = {}
 
 function M.load()
+	-- ── Palette ───────────────────────────────────────────────────────────
 	local bg = "#212121"
 	local bg_panel = "#1c1c1c"
 	local bg_float = "#242424"
 	local bg_sel = "#2d4a48"
 	local bg_line = "#272727"
 	local fg = "#eeeeee"
-	local fg_muted = "#9e9e9e"
-	local border = "#616161"
+	local fg_subtle = "#9e9e9e"
+	local border = "#2c2c2c"
 	local teal = "#80cbc4"
-	local blue = "#81D4FA"
+	local hint = "#26a69a"
+	local blue = "#81d4fa"
 	local green = "#a5d6a7"
 	local yellow = "#fff59d"
 	local orange = "#ffcc80"
 	local red = "#ef9a9a"
 	local red_bold = "#ef5350"
 	local comment = "#626262"
-	local border = "#2c2c2c"
 	local lnum = "#3e3e3e"
 	local lnum_act = "#6a6a6a"
-	local hint = "#26a69a"
 
 	vim.cmd("highlight clear")
 	vim.cmd("set termguicolors")
@@ -46,8 +47,8 @@ function M.load()
 	hl("IncSearch", { fg = bg, bg = teal })
 	hl("MatchParen", { fg = teal, bold = true, underline = true })
 
-	-- ── Statusline & chrome ─────────────────────────────────────────────
-	hl("StatusLine", { fg = fg_muted, bg = bg_panel })
+	-- ── Statusline & chrome ──────────────────────────────────────────────
+	hl("StatusLine", { fg = fg_subtle, bg = bg_panel })
 	hl("StatusLineNC", { fg = fg_subtle, bg = bg_panel })
 	hl("WinSeparator", { fg = border })
 	hl("FloatBorder", { fg = teal, bg = bg_float })
@@ -65,7 +66,7 @@ function M.load()
 	hl("Conditional", { fg = teal })
 	hl("Repeat", { fg = teal })
 	hl("Statement", { fg = teal })
-	hl("Operator", { fg = "#757575" })
+	hl("Operator", { fg = fg_subtle })
 	hl("Function", { fg = blue })
 	hl("Identifier", { fg = fg })
 	hl("Type", { fg = yellow })
@@ -90,7 +91,7 @@ function M.load()
 	hl("Error", { fg = red_bold })
 	hl("Todo", { fg = bg, bg = teal, bold = true })
 
-	-- ── Treesitter ──────────────────────────────────────────────────────
+	-- ── Treesitter ───────────────────────────────────────────────────────
 	hl("@keyword", { fg = teal })
 	hl("@keyword.function", { fg = teal })
 	hl("@keyword.return", { fg = teal })
@@ -101,7 +102,7 @@ function M.load()
 	hl("@method.call", { fg = blue })
 	hl("@constructor", { fg = blue })
 	hl("@type", { fg = yellow })
-	hl("@type.builtin", { fg = "#fdd835" })
+	hl("@type.builtin", { fg = yellow })
 	hl("@string", { fg = green })
 	hl("@string.escape", { fg = hint })
 	hl("@string.regex", { fg = hint })
@@ -112,22 +113,24 @@ function M.load()
 	hl("@constant.builtin", { fg = orange })
 	hl("@variable", { fg = fg })
 	hl("@variable.builtin", { fg = red })
-	hl("@variable.member", { fg = "#b0d4b0" })
-	hl("@variable.parameter", { fg = "#b0b0b0", italic = true })
-	hl("@property", { fg = "#b0d4b0" })
-	hl("@attribute", { fg = "#90caf9" })
+	hl("@variable.member", { fg = green })
+	hl("@variable.parameter", { fg = fg_subtle, italic = true })
+	hl("@property", { fg = green })
+	hl("@attribute", { fg = blue })
 	hl("@tag", { fg = red })
 	hl("@tag.attribute", { fg = orange })
 	hl("@tag.delimiter", { fg = fg_subtle })
-	hl("@operator", { fg = "#757575" })
+	hl("@operator", { fg = fg_subtle })
 	hl("@punctuation.bracket", { fg = fg_subtle })
 	hl("@punctuation.delimiter", { fg = fg_subtle })
 	hl("@comment", { fg = comment, italic = true })
 	hl("@label", { fg = red })
 	hl("@namespace", { fg = yellow })
-	hl("@field", { fg = "#b0d4b0" })
+	hl("@field", { fg = green })
+	-- Rust-specific
+	hl("@storageclass.lifetime", { fg = orange, italic = true })
 
-	-- ── Diagnostics ─────────────────────────────────────────────────────
+	-- ── Diagnostics ──────────────────────────────────────────────────────
 	hl("DiagnosticError", { fg = red_bold })
 	hl("DiagnosticWarn", { fg = orange })
 	hl("DiagnosticInfo", { fg = blue })
@@ -137,7 +140,7 @@ function M.load()
 	hl("DiagnosticUnderlineInfo", { undercurl = true, sp = blue })
 	hl("DiagnosticUnderlineHint", { undercurl = true, sp = hint })
 
-	-- ── Git ─────────────────────────────────────────────────────────────
+	-- ── Git ──────────────────────────────────────────────────────────────
 	hl("GitSignsAdd", { fg = green })
 	hl("GitSignsChange", { fg = yellow })
 	hl("GitSignsDelete", { fg = red })
@@ -146,7 +149,7 @@ function M.load()
 	hl("DiffDelete", { fg = red, bg = "#2e1a1a" })
 	hl("DiffText", { bg = "#3a3620" })
 
-	-- ── Markdown ────────────────────────────────────────────────────────
+	-- ── Markdown ─────────────────────────────────────────────────────────
 	hl("@markup.heading", { fg = fg, bold = true })
 	hl("@markup.italic", { fg = blue, italic = true })
 	hl("@markup.strong", { fg = blue, bold = true })

@@ -158,13 +158,13 @@
 
 ## splits & windows
 
-| key              | action               |
-| ---------------- | -------------------- |
-| `:vsp`           | vertical split       |
-| `:sp`            | horizontal split     |
-| `Ctrl+w h/j/k/l` | move between splits  |
-| `Ctrl+w =`       | equalize split sizes |
-| `Ctrl+w q`       | close split          |
+| key            | action               |
+| -------------- | -------------------- |
+| `:vsp`         | vertical split       |
+| `:sp`          | horizontal split     |
+| `Ctrl+h/j/k/l` | move between splits  |
+| `Ctrl+w =`     | equalize split sizes |
+| `Ctrl+w q`     | close split          |
 
 ---
 
@@ -198,6 +198,7 @@
 | key          | action                  |
 | ------------ | ----------------------- |
 | `<leader>ff` | find files              |
+| `<leader>fr` | find recent files       |
 | `<leader>fg` | live grep (search text) |
 | `<leader>fb` | find buffers            |
 | `Ctrl+j/k`   | move up/down in results |
@@ -246,6 +247,8 @@
 | `<leader>xX` | buffer diagnostics only        |
 | `<leader>cs` | symbols panel                  |
 
+> Note: `gd`, `gr`, and `K` are Neovim 0.10+ built-ins. They work automatically without custom maps!
+
 ---
 
 ## git (gitsigns)
@@ -259,6 +262,17 @@
 | `<leader>gp` | preview hunk      |
 | `<leader>gb` | toggle line blame |
 | `<leader>gd` | diff this file    |
+
+---
+
+## quality of life (qol)
+
+| feature / key | action                                                              |
+| ------------- | ------------------------------------------------------------------- |
+| `hardtime`    | repeating `h/j/k/l` 5 times shows a hint popup with a faster motion |
+| `todo`        | highlights `TODO`, `FIXME`, `NOTE`, `WARN` etc. in code comments    |
+| `<leader>w`   | quickly save file                                                   |
+| `<leader>q`   | quickly quit                                                        |
 
 ---
 
