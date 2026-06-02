@@ -26,10 +26,6 @@ return {
 		vim.keymap.set("n", "u", ug.undo, { noremap = true, desc = "Undo with glow" })
 		vim.keymap.set("n", "<C-r>", ug.redo, { noremap = true, desc = "Redo with glow" })
 
-		-- paste keymaps
-		vim.keymap.set("n", "p", ug.paste_below, { noremap = true, desc = "Paste below with glow" })
-		vim.keymap.set("n", "P", ug.paste_above, { noremap = true, desc = "Paste above with glow" })
-
 		-- yank via autocmd (correct approach per docs)
 		vim.api.nvim_create_autocmd("TextYankPost", {
 			desc = "Highlight when yanking text",
