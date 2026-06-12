@@ -7,8 +7,8 @@ opt.number = true
 opt.relativenumber = true
 
 -- ── Indentation ───────────────────────────────────────────────────────
-opt.tabstop = 2
-opt.shiftwidth = 2
+opt.tabstop = 4
+opt.shiftwidth = 4
 opt.expandtab = true
 opt.smartindent = true
 
@@ -36,3 +36,12 @@ opt.confirm = true -- ask to save instead of erroring on :q
 
 -- ── Editing ───────────────────────────────────────────────────────────
 opt.virtualedit = "block" -- allow cursor past end-of-line in visual block
+
+-- ── Filetype overrides ────────────────────────────────────────────────
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "rust",
+	callback = function()
+		vim.opt_local.tabstop = 4
+		vim.opt_local.shiftwidth = 4
+	end,
+})
